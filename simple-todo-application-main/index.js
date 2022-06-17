@@ -43,8 +43,8 @@ function onUpdateIsDone(task) {
     console.log("チェックボックスがクリックされました。", task);
 
     // 達成状態を更新(このままだと、現在の達成状態で更新されてしまう！)
-    const currentValue = true;
-    task.isDone = currentValue;
+    const currentValue = task.isDone;
+    task.isDone = !currentValue;
 
     return task;
 }
@@ -67,8 +67,8 @@ function onTaskTitleClicked(task) {
     console.log("タイトルがクリックされました。", task);
 
     // 達成状態を更新(このままだと、現在の達成状態で更新されてしまう！)
-    const currentValue = false;
-    task.isDone = currentValue;
+    const currentValue = task.isDone;
+    task.isDone = !currentValue;
 
     return task;
 }
